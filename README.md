@@ -1,1 +1,0 @@
-# armux-ncert-viewer
