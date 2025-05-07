@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>AYUSH-RAJBHAR NCERT Study Material</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #2980b9;
+  --accent-color: #e67e22;
+  --background-color: #f4f9fd;
+  --text-color: #333;
+  --header-height: 60px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  background: var(--primary-color);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: var(--secondary-color);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline-color: var(--accent-color);
+  margin-bottom: 24px;
+}
+
+.content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  padding: 16px;
+  min-height: 250px;
+}
+
+h2 {
+  color: var(--accent-color);
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+ul.topics {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul.topics li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+ul.topics li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+ul.topics li a:hover,
+ul.topics li a:focus {
+  color: var(--accent-color);
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding: 12px 10px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+/* Scrollbar for content on mobile */
+main {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) #ddd;
+}
+main::-webkit-scrollbar {
+  width: 6px;
+}
+main::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+/* Responsive typography */
+@media (max-width: 350px) {
+  header {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+}
+</style>
+</head>
+<body>
+<header>AYUSH-RAJBHAR</header>
+<main>
+  <section class="intro" aria-label="Website introduction">
+    <p>Welcome to the AYUSH-RAJBHAR NCERT Study Material website for classes 1 to 8. Select your class below to view related topics and resources.</p>
+  </section>
+
+  <section aria-label="Select class">
+    <label for="classSelect">Choose Class:</label>
+    <select id="classSelect" aria-describedby="classHelp" aria-controls="studyContent">
+      <option value="" disabled selected>-- Select Class --</option>
+      <option value="1">Class 1</option>
+      <option value="2">Class 2</option>
+      <option value="3">Class 3</option>
+      <option value="4">Class 4</option>
+      <option value="5">Class 5</option>
+      <option value="6">Class 6</option>
+      <option value="7">Class 7</option>
+      <option value="8">Class 8</option>
+    </select>
+  </section>
+
+  <section id="studyContent" class="content" aria-live="polite" tabindex="0">
+    <h2>Please select a class to see study topics</h2>
+    <p>The NCERT study material topics will appear here after you select your class.</p>
+  </section>
+</main>
+<footer>
+  &copy; 2024 AYUSH-RAJBHAR. NCERT Study Material.
+</footer>
+<script>
+const studyData = {
+  1: {
+    title: "Class 1 - Foundations",
+    topics: [
+      {text: "English - Alphabet & Basic Words", url: "#"},
+      {text: "Mathematics - Numbers and Counting", url: "#"},
+      {text: "Environmental Studies - My Family and School", url: "#"},
+      {text: "Hindi - Swar and Vyanjan", url: "#"}
+    ]
+  },
+  2: {
+    title: "Class 2 - Early Learning",
+    topics: [
+      {text: "English - Simple Sentences", url: "#"},
+      {text: "Mathematics - Addition & Subtraction", url: "#"},
+      {text: "Environmental Studies - Plants and Animals", url: "#"},
+      {text: "Hindi - Barakhadi", url: "#"},
+      {text: "Science - The Wonder of Science", url: "#"}
+    ]
+  },
+  3: {
+    title: "Class 3 - Building Concepts",
+    topics: [
+      {text: "English - Grammar Basics", url: "#"},
+      {text: "Mathematics - Multiplication & Division", url: "#"},
+      {text: "Environmental Studies - Food and Shelter", url: "#"},
+      {text: "Hindi - Kahani aur Kavita", url: "#"},
+      {text: "Science - The Wonder of Science", url: "#"}
+    ]
+  },
+  4: {
+    title: "Class 4 - Expanding Knowledge",
+    topics: [
+      {text: "English - Paragraph Writing", url: "#"},
+      {text: "Mathematics - Fractions & Decimals", url: "#"},
+      {text: "Science - Plants and Animals", url: "#"},
+      {text: "Hindi - Kahani aur Nibandh", url: "#"},
+      {text: "Science - The Wonder of Science", url: "#"}
+    ]
+  },
+  5: {
+    title: "Class 5 - Advanced Basics",
+    topics: [
+      {text: "English - Comprehension & Essays", url: "#"},
+      {text: "Mathematics - Geometry Basics", url: "#"},
+      {text: "Science - Human Body", url: "#"},
+      {text: "Hindi - Kahani, Kavita aur Nibandh", url: "#"},
+      {text: "Science - The Wonder of Science", url: "#"}
+    ]
+  },
+  6: {
+    title: "Class 6 - Intermediate Learning",
+    topics: [
+      {text: "English - Literature and Grammar", url: "#"},
+      {text: "Mathematics - Whole Numbers and Integers", url: "#"},
+      {text: "Science - Food and Nutrition", url: "#"},
+      {text: "Social Science - History Basics", url: "#"},
+      {text: "Science - The Wonder of Science", url: "#"}
+    ]
+  },
+  7: {
+    title: "Class 7 - Building Strength",
+    topics: [
+      {text: "English - Writing Skills", url: "https://www.blackbox.ai/chat/WjV4cMC"},
+      {text: "Mathematics - Algebra and Geometry", url: "#"},
+      {text: "Science - Motion and Measurement", url: "#"},
+      {text: "Social Science - Geography & Civics", url: "#"},
+      {text: "Science - The Wonder of Science", url: "#"}
+    ]
+  },
+  8: {
+    title: "Class 8 - Preparing for Next Levels",
+    topics: [
+      {text: "English - Comprehension & Creative Writing", url: "#"},
+      {text: "Mathematics - Data Handling and Graphs", url: "#"},
+      {text: "Science - Chemical Substances", url: "#"},
+      {text: "Social Science - Modern History", url: "#"},
+      {text: "Science - The Wonder of Science", url: "#"}
+    ]
+  }
+};
+
+const classSelect = document.getElementById('classSelect');
+const studyContent = document.getElementById('studyContent');
+
+classSelect.addEventListener('change', () => {
+  const classValue = classSelect.value;
+  if (!classValue || !studyData[classValue]) {
+    studyContent.innerHTML = '<h2>Please select a valid class to see study topics</h2><p>No data available.</p>';
+    return;
+  }
+  const data = studyData[classValue];
+
+  let html = `<h2>${data.title}</h2><ul class="topics">`;
+  data.topics.forEach(topic => {
+    html += `<li><a href="${topic.url}" target="_blank" rel="noopener noreferrer">${topic.text}</a></li>`;
+  });
+  html += '</ul>';
+
+  studyContent.innerHTML = html;
+  studyContent.focus();
+});
+</script>
+</body>
+</html>
+
